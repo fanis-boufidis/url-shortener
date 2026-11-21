@@ -13,5 +13,6 @@ class Link(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     clicks = models.PositiveIntegerField(default=0) 
 
-def __str__(self):          # ορίζει πώς "τυπώνεται" ένα Link (το βλέπεις στο admin)
-    return f"{self.code} -> {self.original_url}"   # f-string: βάζει τις τιμές μέσα στο κείμενο, π.χ. "aB3xYz -> https://..."
+
+    def __str__(self):          # ορίζει πώς "τυπώνεται" ένα Link (το βλέπεις στο admin)
+        return f"{self.code} -> {self.original_url}"   # f-string: βάζει τις τιμές μέσα στο κείμενο, π.χ. "aB3xYz -> https://..."

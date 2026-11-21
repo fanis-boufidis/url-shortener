@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("<str:code>", views.redirect_link),
     path("api/links/", views.create_link),
+    path("api/links/<code>/stats/", views.link_stats),
 ]

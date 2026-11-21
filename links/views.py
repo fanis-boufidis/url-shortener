@@ -31,3 +31,14 @@ def create_link(request):
         },
         status=201, 
     )
+def link_stats(request, code):
+    link = get_object_or_404(Link, code=code)
+    return JsonResponse(
+        {
+            "code": link.code,
+            "original_url": link.original_url,
+            "clicks": link.clicks,
+            "created at": link.created_at,
+            
+        }
+    )
